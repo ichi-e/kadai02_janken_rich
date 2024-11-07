@@ -11,7 +11,7 @@ Cat Card Game
 
 ③DEMO
 
-デプロイしている場合はURLを記入（任意）
+https://ichi-e.github.io/kadai02_janken_rich/
 
 ④作ったアプリケーション用のIDまたはPasswordがある場合
 
