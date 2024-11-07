@@ -1,0 +1,82 @@
+.wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.btm_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+#start_btn {
+    width: 120px;
+    font-size: 20px;
+}
+#field {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+.card {
+    aspect-ratio: 7/10;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    font-size: 30px;
+    place-content: center;
+    text-align: center;
+    background: #fedddd;
+    box-sizing: border-box;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#clock {
+    font-size: 30px;;
+}
+.hidden {
+    position: relative;
+}
+.hidden::after {
+    place-content: center;
+    content: "";
+    color: #fff;
+    background: #000;
+    opacity: 0.5;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 1 ease-in;
+}
+.bg1{
+    background: url(img/img1.jpg) no-repeat center;
+    background-size: co;
+}
+.disabled {
+    pointer-events: none;
+}
+.records {
+    background: #8095ce;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+}
+#note {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 30px;
+    place-items: center;
+}
+#note div {
+    font-size: 16px;
+}
+h2{
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
