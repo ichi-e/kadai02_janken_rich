@@ -103,13 +103,18 @@ function stopTimer() {
     timer2 = null;
 }
 
+
 // 記録
 function notes() {
+times.sort(function (first, second) {
+  return first - second;  
+});
+console.log(times);
     times.forEach(function (time, index) {
         let note = $("<div>")
             .data("index", index)
             .data("time", time)
-            .text((index+1) + "回目：" + time + "秒");
+            .text( "No" + (index+1) + " : " + time + "秒");
         $("#note").append(note);
     });
 }
