@@ -70,7 +70,7 @@ function click() {
         // 同じカードがクリックされた場合、２枚目をクリックしたことにならないために必要
     } else {
       second = elm;
-        timer = setTimeout(judge, 500);
+        timer = setTimeout(judge, 800);
       elm.append('<img src="img/img' + imgNum + '.jpg">');
     }
 
