@@ -106,10 +106,10 @@ function stopTimer() {
 
 // 記録
 function notes() {
-times.sort(function (first, second) {
-  return first - second;  
-});
-console.log(times);
+    times.sort(function (first, second) {
+      return first - second;  
+    });
+  
     times.forEach(function (time, index) {
         let note = $("<div>")
             .data("index", index)
