@@ -81,3 +81,17 @@ h2{
     text-align: center;
     border-bottom: 1px solid #fff;
 }
+#note div.latestTime {
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+    animation: blinking 1s ease-in-out infinite alternate;
+}
+@keyframes blinking {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

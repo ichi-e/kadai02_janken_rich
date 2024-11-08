@@ -17,6 +17,7 @@ let mekuri = 0;
 let count = 0;
 let clock = $("#clock");
 let timer2;
+let latestTime;
 
 // タイマーの設定
 function start() {
@@ -94,28 +95,37 @@ function click() {
 
 // タイマーを止める
 function stopTimer() {
-    clearInterval(timer2);
-    times.push(count);
-    mekuri = 0;
-    count = 0;
-    $("#note").empty();
-    notes();
-    timer2 = null;
+  clearInterval(timer2);
+  latestTime = count;
+  times.push(latestTime);
+  times.sort(function (a, b) {
+    return a - b;
+  });
+  mekuri = 0;
+  count = 0;
+  $("#note").empty();
+  notes();
+  timer2 = null;
 }
-
 
 // 記録
 function notes() {
-    times.sort(function (first, second) {
-      return first - second;  
-    });
+    // times.sort(function (first, second) {
+    //   return first - second;  
+    // });
   
     times.forEach(function (time, index) {
-        let note = $("<div>")
-            .data("index", index)
-            .data("time", time)
-            .text( "No" + (index+1) + " : " + time + "秒");
-        $("#note").append(note);
+      let note = $("<div>")
+        .addClass(function () {
+          if (time === latestTime) {
+            return "latestTime";
+            }
+          })
+        .data("index", index)
+        .data("time", time)
+        .text( "No" + (index+1) + " : " + time + "秒");
+      $("#note").append(note);
+      
     });
 }
 
