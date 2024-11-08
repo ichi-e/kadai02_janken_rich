@@ -121,8 +121,6 @@ function notes() {
             return "latestTime";
             }
           })
-        .data("index", index)
-        .data("time", time)
         .text( "No" + (index+1) + " : " + time + "秒");
       $("#note").append(note);
       
