@@ -119,9 +119,17 @@ function notes() {
         .addClass(function () {
           if (time === latestTime) {
             return "latestTime";
-            }
-          })
-        .text( "No" + (index+1) + " : " + time + "秒");
+          }
+        });
+        if (index === 0) {
+          note.text("1st : "  + time + "sec");
+        } else if (index === 1) {
+          note.text("2nd : "  + time +  "sec");
+        } else if (index === 2) {
+          note.text("3rd : "  + time +  "sec");
+        } else {
+          note.text( (index+1) + "th : " + time + "sec");
+        }
       $("#note").append(note);
       
     });
